@@ -7,19 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>理货单</title>
     <style>
-        .clear:after {
-            content: '';
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
-            font-size: 0;
-        }
-
-        .clear {
-            zoom: 1;
-        }
-
         html,
         body {
             margin: 0;
@@ -53,6 +40,10 @@
             width: 100%;
         }
 
+        .lihuo h4 {
+            margin-top: 10px;
+        }
+
         .lihuo .header {
             text-align: center;
             position: relative;
@@ -74,17 +65,9 @@
             margin-top: -50px;
         }
 
-        .lihuo .main-info {
+        .lihuo table.main-info {
             margin-top: 20px;
-        }
-
-        .lihuo .main-info li {
-            float: left;
-            width: 33%;
-        }
-
-        .lihuo .main-info li span:first-child {
-            margin-right: 10px;
+            width: 100%;
         }
 
         .lihuo .table {
@@ -98,27 +81,15 @@
             white-space: wrap;
         }
 
-        .lihuo .footer {
-            margin-top: 20px;
-        }
-
-        .lihuo .footer h4 {
-            margin-bottom: 5px;
-        }
-
-        .lihuo .footer p {
-            margin-bottom: 5px;
-        }
-
-        .lihuo .footer p span {
-            display: inline-block;
-            width: 33%;
-        }
-
-        .lihuo .footer .recordbox {
-            margin: 0 10px 5px;
-            border: 1px solid #333;
+        .lihuo table.recordbox {
+            width: 100%;
             height: 200px;
+            margin-top: 10px;
+        }
+
+        .lihuo table.sign {
+            width: 100%;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -131,32 +102,38 @@
             <img class="onecode" src="http://192.168.2.70:8080/logo.png" alt="">
             <img class="qrcode" src="http://192.168.2.70:8080/logo.png" alt="">
         </div>
-        <ul class="main-info clear">
-            <li>
-                <span>仓库名称：</span>
-                <span>深圳仓</span>
-            </li>
-            <li>
-                <span>客户名称：</span>
-                <span>深圳仓</span>
-            </li>
-            <li>
-                <span>司机/电话：</span>
-                <span>深圳仓</span>
-            </li>
-            <li>
-                <span>入库单号：</span>
-                <span>深圳仓</span>
-            </li>
-            <li>
-                <span>送货车牌号：</span>
-                <span>深圳仓</span>
-            </li>
-            <li>
-                <span>入库时间：</span>
-                <span>深圳仓</span>
-            </li>
-        </ul>
+        <table class="main-info">
+            <tbody>
+                <tr>
+                    <td>
+                        <span>仓库名称：</span>
+                        <span>深圳仓</span>
+                    </td>
+                    <td>
+                        <span>客户名称：</span>
+                        <span>深圳仓</span>
+                    </td>
+                    <td>
+                        <span>司机/电话：</span>
+                        <span>深圳仓</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>入库单号：</span>
+                        <span>深圳仓</span>
+                    </td>
+                    <td>
+                        <span>送货车牌号：</span>
+                        <span>深圳仓</span>
+                    </td>
+                    <td>
+                        <span>入库时间：</span>
+                        <span>深圳仓</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table" border="1" cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
@@ -202,27 +179,29 @@
                 </tr>
             </tbody>
         </table>
-        <div class="footer">
-            <h4>实物验收货损差或其他记录：</h4>
-            <div class="recordbox"></div>
-            <h4>声明</h4>
-            <h4>1.本签收单一式二份，仓库留存一份，交送货人一份。</h4>
-            <p>
-                <span>收货人(签字)：</span>
-                <span></span>
-                <span>送货人(签字)：</span>
-            </p>
-            <p>
-                <span>日期：</span>
-                <span></span>
-                <span>日期：</span>
-            </p>
-            <p>
-                <span></span>
-                <span>打印时间：</span>
-                <span>制单人：</span>
-            </p>
-        </div>
+        <h4>实物验收货损差或其他记录：</h4>
+        <table class="recordbox" border="1"></table>
+        <h4>声明</h4>
+        <h4>1.本签收单一式二份，仓库留存一份，交送货人一份。</h4>
+        <table class="sign">
+            <tbody>
+                <tr>
+                    <td>收货人(签字)：</td>
+                    <td></td>
+                    <td>送货人(签字)：</td>
+                </tr>
+                <tr>
+                    <td>日期：</td>
+                    <td></td>
+                    <td>日期：</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>打印时间：</td>
+                    <td>制单人：</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
