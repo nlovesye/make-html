@@ -9,12 +9,27 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      redirect: '/lihuo'
+      redirect: '/shipmentSign'
     },
     {
       path: '/lihuo',
       name: 'lihuo',
       component: () => import(/* webpackChunkName: "lihuo" */ '../views/LiHuo.vue')
+    },
+    {
+      path: '/receiptSign',
+      name: 'ReceiptSign',
+      component: () => import(/* webpackChunkName: "ReceiptSign" */ '../views/ReceiptSign.vue')
+    },
+    {
+      path: '/pick',
+      name: 'Pick',
+      component: () => import(/* webpackChunkName: "Pick" */ '../views/Pick.vue')
+    },
+    {
+      path: '/shipmentSign',
+      name: 'ShipmentSign',
+      component: () => import(/* webpackChunkName: "ShipmentSign" */ '../views/ShipmentSign.vue')
     }
   ]
 })
