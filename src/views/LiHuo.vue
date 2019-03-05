@@ -1,11 +1,30 @@
 <template language='html'>
   <div class="lihuo">
-    <div class="header">
-      <h1>富润德供应链管理有限公司</h1>
-      <h2>理货单</h2>
-      <img class="onecode" src="http://192.168.2.70:8080/logo.png" alt="">
-      <img class="qrcode" src="http://192.168.2.70:8080/logo.png" alt="">
-    </div>
+    <table class="header">
+        <tbody>
+            <tr>
+                <td colspan="2" width="100"></td>
+                <td colspan="8">
+                  <h1>富润德供应链管理有限公司</h1>
+                </td>
+                <td rowspan="3" colspan="2" width="100" height="100">
+                  <img class="qrcode" width="100" height="100" src="http://192.168.2.70:8080/logo.png" alt="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="100"></td>
+                <td colspan="8">
+                  <h2>理货单</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="100"></td>
+                <td colspan="8" width="360" height="40">
+                  <img class="onecode" width="360" height="40" src="http://192.168.2.70:8080/logo.png" alt="" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="main-info">
       <tbody>
         <tr>
@@ -84,7 +103,13 @@
       </tbody>
     </table>
     <h4>实物验收货损差或其他记录：</h4>
-    <table class="recordbox" border="1"></table>
+    <table class="recordbox" border="1" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
     <h4>声明</h4>
     <h4>1.本签收单一式二份，仓库留存一份，交送货人一份。</h4>
     <table class="sign">
@@ -137,24 +162,22 @@ html, body{
 .lihuo h4{
   margin-top: 10px;
 }
-.lihuo .header {
+
+.lihuo table.header{
+  width: 100%;
+  table-layout:fixed;
   text-align: center;
-  position: relative;
 }
-.lihuo .onecode{
-  width: 400px;
+/* .lihuo table.header .qrcode {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+} */
+/* .lihuo table.header .onecode {
+  width: 360px;
   height: 50px;
-  background-color: #aaa;
-}
-.lihuo .qrcode {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: #aaa;
-  right: 20px;
-  top: 50%;
-  margin-top: -50px;
-}
+  display: inline-block;
+} */
 
 .lihuo table.main-info{
   margin-top: 20px;
@@ -175,6 +198,7 @@ html, body{
   width: 100%;
   height: 200px;
   margin-top: 10px;
+  table-layout:fixed;
 }
 .lihuo table.sign{
   width: 100%;
